@@ -5,7 +5,7 @@ const fs = require('fs')
 const pool = mysql.createPool({
     host: '127.0.0.1',
     user: 'root',
-    password: 'yang218906',
+    password: 'xxxxxx',
     database: 'exam'
 })
 function con(sql) {
