@@ -1,0 +1,32 @@
+include head
+    body
+        #wapper
+            .jumbotron
+                .container
+                    h2 Lost and Found
+                    p Welecome to the homepage of Wit Lost and Found, this is powered by YokeYang and his teamate
+                    ul.nav-links
+                        li
+                            a(href="#Lost",role="tab",data-toggle="tab") Find Lost
+                        li
+                            a(href="#Owner",role="tab",data-toggle="tab") Find Owner
+                        li
+                            a(href="#MyPage",role="tab",data-toggle="tab") MyPage
+                    .input-group
+                        input(type="text",placeholder="Search something").form-control
+                        span.input-group-btn
+                            button.btn.btn-primary Search
+            .container
+                - if(data.name === ''||data.name === undefined)
+                    .alert.alert-warning(role="alert")
+                        p Your not Login in 
+                            a(href="/login").alert-link Login
+                -else
+                    .alert.alert-success(role="alert")
+                        p Find something?Try to 
+                            a(href="#",data-target="#post",data-toggle="modal").alert-link Post
+                    .tab-content
+                        include Lost
+                        include Owner
+                        include MyPage
+                    include Post

@@ -1,0 +1,54 @@
+#wapper{
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+}
+.outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.line{
+    height: 0.1rem;
+    background-color: rgba(78, 72, 72, 0.219);
+    width: 100%;
+}
+
+.action-button,.nav-links,.last-info{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    list-style:none;
+    padding: 0;
+}
+.nav-links li:first-child{
+    margin-right: 1rem;
+}
+.action-button button:last-child,.nav-links li:last-child{
+    margin-left: auto;
+}
+.jumbotron{
+    padding-bottom: 1rem;
+}
+.last-info a{
+    margin-left: auto;
+}
+.comment{
+    list-style: none;
+    font-style: oblique;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+.comment li{
+    display: flex;
+}
+.comment li::before{
+    content: '— ';
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}

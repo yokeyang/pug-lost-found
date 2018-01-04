@@ -1,0 +1,20 @@
+include head
+title Login
+body
+    .outer.row
+        h2.text-center Please Login
+        .col-md-6.col-xs-10
+            form
+                .form-group.g1
+                    label(for="username") username
+                    input(type="text",placeholder="username").form-control#username
+                .form-group.g2
+                    label(for="password") password
+                    input(type="password",placeholder="password").form-control#password
+                .checkbox
+                    label
+                        input(type="checkbox")
+                        span Login With Manager
+            .action-button
+                button.btn.btn-primary#btn-login Login
+                button.btn.btn-default#btn-register Register

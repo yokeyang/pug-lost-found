@@ -1,0 +1,28 @@
+.tab-pane#MyPage
+    .mypage
+        p
+            strong UserName: 
+            |#{data.name}
+        p
+            strong PassWord: 
+            |*******
+        p
+            strong Tel: 
+            |130-xxxx-xxxx
+        p.last-info
+            strong ReceviedMessage:
+            a(href="#receviedmessage",data-toggle="collapse",aria-expanded="false",aria-controls="#receviedmessage") Open
+        .collapse#receviedmessage
+            .line
+            ul.comment
+                for comment in data.comments
+                    li #{comment.msg}
+        p.last-info
+            strong Posted: 
+            a(href="#posted",data-toggle="collapse",aria-expanded="false",aria-controls="#posted") Open
+        .collapse#posted
+            .line
+            ul.comment
+                for post in data.posts
+                    li.title "#{post.title.toUpperCase()}"
+                        a(href="javascript:void(0)",style="margin-left:auto",id=`del-post${post.id}`) Del

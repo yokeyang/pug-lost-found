@@ -1,0 +1,36 @@
+.modal.fade(tabindex="-1",role="dialog",aria-labelledby="myModalLabel")#post
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h2.text-center Post Infos
+            .modal-body
+                .outer.row
+                    .col-md-11.col-xs-12
+                        form
+                            .form-group.g1
+                                label(for="title") Title
+                                input(type="text",placeholder="title").form-control#input-title                            
+                            .form-group.g2
+                                label(for="name") Name
+                                input(type="text",placeholder="name").form-control#input-name
+                            .form-group.g3
+                                label(for="goods") Goods
+                                input(type="text",placeholder="goods").form-control#input-goods
+                            .form-group.g4
+                                label(for="type") Type
+                                .input-group
+                                    input(value="Find Lost").form-control#input-type
+                                    .input-group-btn(style = "width:20%")
+                                        select.form-control#type
+                                            option(value="lost") Find Lost
+                                            option(value="owner") Find Owner
+                                            option(value="not") not nessary
+                            .form-group.g5
+                                label(for="location") location 
+                                input(type="text",placeholder="location").form-control#input-location
+                            .form-group.g6
+                                label(for="message") message
+                                textarea(name="message", rows="3").form-control#message
+                        .action-button
+                            button.btn.btn-primary#btn-Post Post
+                            button(data-dismiss="modal").btn.btn-default Cancle

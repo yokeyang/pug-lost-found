@@ -1,0 +1,30 @@
+.tab-pane.in.active#Lost
+    for d in data.goods
+        -if (d.type !=='Find Owner')
+            .well
+                h3 #{d.title}
+                p
+                    strong Name: 
+                    |#{d.name}
+                p
+                    strong Goods: 
+                    |#{d.good}
+                p
+                    strong Type: 
+                    |#{d.type}
+                p
+                    strong Location: 
+                    |#{d.location}
+                p.last-info
+                    strong Message: 
+                    |#{d.message}
+                    a(href=`#Lcomment${d.id}`,data-toggle="collapse",aria-expanded="false",aria-controls=`#Lcomment${d.id}`) Comment
+                .collapse(id = `Lcomment${d.id}`)
+                    .line
+                    ul.comment
+                        for comment in d.comments
+                            li #{comment.msg}
+                    .input-group
+                        input(type="text",placeholder="Comment some...",id = `input-Lcomment${d.id}`).form-control
+                        span.input-group-btn
+                            button(id = `btn-Lcomment${d.id}`).btn.btn-default Go
